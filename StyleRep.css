@@ -1,0 +1,297 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color:  #00338e;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar {
+    width: 15%;
+    padding: 20px;
+}
+
+.sidebar img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+main {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+section {
+    background-color: #fff;
+    padding: 1em;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    color: #007bff;
+    text-align: center;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 96%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.content.show {
+    display: flex;
+}
+
+.video-container,
+.guia-container,
+.juego-container,
+.documento-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.video-container iframe,
+.guia-container iframe,
+.juego-container iframe,
+.documento-container iframe {
+    width: 100%;
+    height: 300px;
+    margin: 10px;
+}
+
+/* Estilos específicos para la sección de guías */
+.guia-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.guia-item {
+    margin-bottom: 20px; /* Aumentamos el espacio entre elementos */
+    width: 100%;
+    text-align: center;
+}
+
+.guia-item a {
+    display: inline-block;
+    padding: 15px 25px; /* Aumentamos el padding para más espacio */
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    font-size: 18px; /* Aumentamos el tamaño de la fuente */
+    line-height: 1.6; /* Aumentamos el interlineado */
+    border: 1px solid #ddd;
+    max-width: 80%; /* Limitamos el ancho máximo */
+}
+
+.guia-item a:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilo específico para el texto dentro del enlace */
+.guia-item a span {
+    display: block; /* Hace que cada línea de texto esté en su propia línea */
+    margin-bottom: 5px; /* Espacio entre líneas de texto */
+}
+
+/* Estilos específicos para la sección de aplicaciones de utilidad */
+
+
+.juego-container {
+    margin-bottom: 20px; /* Aumentamos el espacio entre elementos */
+    width: 100%;
+    text-align: center;
+}
+
+.juego-container a {
+    display: inline-block;
+    padding: 15px 25px; /* Aumentamos el padding para más espacio */
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    font-size: 18px; /* Aumentamos el tamaño de la fuente */
+    line-height: 1.6; /* Aumentamos el interlineado */
+    border: 1px solid #ddd;
+    max-width: 80%; /* Limitamos el ancho máximo */
+}
+
+.juego-container a:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilo específico para el texto dentro del enlace */
+.juego-container a span {
+    display: block; /* Hace que cada línea de texto esté en su propia línea */
+    margin-bottom: 5px; /* Espacio entre líneas de texto */
+}
+
+
+
+/* Estilos específicos para la sección de documentos */
+
+
+.documento-container {
+    margin-bottom: 20px; /* Aumentamos el espacio entre elementos */
+    width: 100%;
+    text-align: center;
+}
+
+.documento-container a {
+    display: inline-block;
+    padding: 15px 25px; /* Aumentamos el padding para más espacio */
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    font-size: 18px; /* Aumentamos el tamaño de la fuente */
+    line-height: 1.6; /* Aumentamos el interlineado */
+    border: 1px solid #ddd;
+    max-width: 80%; /* Limitamos el ancho máximo */
+}
+
+.documento-container a:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilo específico para el texto dentro del enlace */
+.documento-container a span {
+    display: block; /* Hace que cada línea de texto esté en su propia línea */
+    margin-bottom: 5px; /* Espacio entre líneas de texto */
+}
+
+
+
+/* Media query para dispositivos con pantallas más pequeñas (teléfonos) */
+@media only screen and (max-width: 768px) {
+    /* Los contenedores se apilan verticalmente */
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Sidebar se expande al 100% del ancho */
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Main se ajusta al 100% del ancho */
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Ajustamos el slider a un tamaño menor */
+    .slider {
+        height: 200px; /* Reducir el tamaño del slider */
+    }
+
+    /* Imagenes del slider adaptadas a la nueva altura */
+    .slide img {
+        height: 200px; /* Mantener la imagen en proporción */
+    }
+
+    /* Ajustar el tamaño de la tipografía y los paddings */
+    h1 {
+        font-size: 24px; /* Título principal más pequeño */
+    }
+
+    h2 {
+        font-size: 20px; /* Títulos de secciones más pequeños */
+    }
+
+    .guia-item a, .juego-container a, .documento-container a {
+        font-size: 16px; /* Texto más pequeño en los enlaces */
+        padding: 10px 15px; /* Menos espacio en los enlaces */
+    }
+
+    /* Imágenes dentro de los sidebars */
+    .sidebar img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajustamos el contenido para que no esté tan espaciado */
+    .content {
+        padding: 10px;
+    }
+}
